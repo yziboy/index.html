@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>The Element Object</h1>
+  <h2>The appendChild() Method</h2>
+
+  <ul id="myList">
+    <li>Coffee</li>
+    <li>Tea</li>
+  </ul>
+
+  <p>Enter text for the new item:</p>
+  <input type="text" id="newItemText">
+
+  <p>Choose color for the new item:</p>
+  <label>
+    <input type="radio" name="color" value="green"> Green
+  </label>
+  <label>
+    <input type="radio" name="color" value="blue"> Blue
+  </label>
+  <label>
+    <input type="radio" name="color" value="red"> Red
+  </label>
+
+  <p>Click "Append" to append an item to the end of the list:</p>
+
+  <button onclick="myFunction()">Append</button>
+
+  <script>
+    function myFunction() {
+      // Get the text from the input field
+      const newText = document.getElementById("newItemText").value;
+
+      // Create an "li" node:
+      const node = document.createElement("li");
+
+      // Create a text node with the entered text:
+      const textnode = document.createTextNode(newText);
+
+      // Append the text node to the "li" node:
+      node.appendChild(textnode);
+
+      // Get the selected color
+      const selectedColor = document.querySelector('input[name="color"]:checked').value;
+
+      // Set the color of the "li" node
+      node.style.color = selectedColor;
+
+      // Append the "li" node to the list:
+      document.getElementById("myList").appendChild(node);
+    }
+  </script>
+
+</body>
+</html>

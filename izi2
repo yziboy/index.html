@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <title>Calculadora de Média</title>
+</head>
+<body>
+
+  <script>
+    // 1. Obter nota1
+    var nota1 = parseFloat(prompt("Informe a nota 1:"));
+
+    // 2. Obter nota2
+    var nota2 = parseFloat(prompt("Informe a nota 2:"));
+
+    // 3. Calcular média
+    var media = (nota1 + nota2) / 2;
+
+    // 4. Verificar situação e cor
+    var situacao, cor;
+    if (media >= 6) {
+      situacao = "Aprovado";
+      cor = "blue";
+    } else {
+      situacao = "Reprovado";
+      cor = "red";
+    }
+
+    // 5. Mostrar Média e Situação
+    var mediaSpan = document.createElement("span");
+    mediaSpan.innerHTML = "Média: " + media.toFixed(2);
+    mediaSpan.style.color = cor;
+    document.body.appendChild(mediaSpan);
+
+    var situacaoSpan = document.createElement("span");
+    situacaoSpan.innerHTML = " Situação: " + situacao;
+    situacaoSpan.style.color = cor;
+    document.body.appendChild(situacaoSpan);
+  </script>
+
+</body>
+</html>

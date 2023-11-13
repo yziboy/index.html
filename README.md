@@ -1,1 +1,1 @@
-participantes : Pedro Cordeiro,Igor matheus, Andressa gomes
+participantes : Pedro Cordeiro,Igor matheus
